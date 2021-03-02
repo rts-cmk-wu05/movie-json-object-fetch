@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Front-end</title>
+	<style>
+		/* Critical styling goes here */
+	</style>
+</head>
+<body>
+	
+	<!-- Start content -->
+
+	<!-- End content -->
+
+	<script src="js/app.js" defer></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const stylesheet = document.createElement('link');
+			stylesheet.href = 'css/style.css';
+			stylesheet.rel = 'stylesheet';
+			stylesheet.type = 'text/css';
+			document.getElementsByTagName('head')[0].appendChild(stylesheet);
+		});
+	</script>
+	<noscript>
+		<link rel="stylesheet" href="css/style.css">
+	</noscript>
+</body>
+</html>
