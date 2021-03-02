@@ -48,3 +48,9 @@ const movieList = [
 ]
 
 console.log(movieList);
+
+for (let i= 0 ; i < movieList.length ; i++){
+    console.log(movieList[i].Title);
+    console.log(movieList[i].Genre[0]+" "+movieList[i].Genre[1]);
+}
+
