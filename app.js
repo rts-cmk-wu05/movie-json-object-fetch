@@ -50,25 +50,25 @@ const movieList = [
 const wrapper = document.querySelector(".wrapper");
 
 addDataToHTML();
-function addDataToHTML(){
+function addDataToHTML() {
 
-    for (let i = 0; i < movieList.length ; i++){
+    for (let i = 0; i < movieList.length; i++) {
 
-        const movie = movieList[i];
-        const movieKey = Object.keys(movie); 
-
+        const movieArray = Object.entries(movieList[i]);
         const section = document.createElement('section');
+
         section.classList.add('movie-info-box');
-        section.innerHTML =
-            `<h1 class="movie-info-box__header">${movie.Title}</h1>
-            <p class="movie-info-box__info"><span>${movieKey[1]}</span>: ${movie.Year}</p>
-            <p class="movie-info-box__info"><span>${movieKey[2]}</span>: ${movie.Rated}</p>
-            <p class="movie-info-box__info"><span>${movieKey[3]}</span>: ${movie.Genre}</p>
-            <p class="movie-info-box__info"><span>${movieKey[4]}</span>: ${movie.Director}</p>
-            <p class="movie-info-box__info"><span>${movieKey[5]}</span>: ${movie.Writer}</p>
-            <p class="movie-info-box__info"><span>${movieKey[6]}</span>: ${movie.Actors}</p>`
-        wrapper.appendChild(section); 
+        section.innerHTML = `<h1 class="movie-info-box__header">${movieList[i].Title}</h1>`;
+
+        for (let i = 1; i < movieArray.length; i++) {
+
+            const [property, value] = movieArray[i];
+            const pTag = document.createElement('p');
+            pTag.classList.add('movie-info-box__info');
+
+            pTag.innerHTML = `<span>${property}</span>: ${value}`; 
+            section.appendChild(pTag);
+        }
+        wrapper.appendChild(section);
     }
-
 };
-
