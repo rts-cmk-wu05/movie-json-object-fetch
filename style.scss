@@ -1,0 +1,57 @@
+/* ==== BOILER PLATE START ==== */
+@charset "utf-8";
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    line-height: 1.5;  
+}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+html{
+    font-size: 1em;
+    font-family: 'Nunito', sans-serif;
+}
+
+img{
+    width:100%;
+    height:auto;
+    display:block;
+    
+}
+
+.wrapper{
+    max-width:1000px;
+    margin: 2rem auto;
+}
+
+a{
+    text-decoration: none;
+    color: black;  
+  }
+
+ul{
+    list-style: none;  
+}
+
+.movie-info-box{
+    max-width: 350px;
+    padding: 1rem;
+    margin: auto;
+    background-color: rgb(247, 247, 247);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+
+    &__header{
+        text-decoration: underline;
+        padding-bottom: 1rem;
+    }
+
+    &__info{
+        padding-bottom: .5rem;
+    }
+}
+
+span{
+    font-weight: 600;
+}
