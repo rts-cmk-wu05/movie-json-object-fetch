@@ -38,9 +38,11 @@ ul{
     max-width: 350px;
     padding: 1rem;
     margin: auto;
-    background-color: rgb(247, 247, 247);
+    background-color: rgb(250, 250, 250);
+    border: solid 1px rgb(231, 231, 231);
     border-radius: 10px;
     margin-bottom: 2rem;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 
     &__header{
         text-decoration: underline;

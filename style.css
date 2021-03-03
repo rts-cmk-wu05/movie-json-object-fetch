@@ -37,9 +37,12 @@ ul {
   max-width: 350px;
   padding: 1rem;
   margin: auto;
-  background-color: #f7f7f7;
+  background-color: #fafafa;
+  border: solid 1px #e7e7e7;
   border-radius: 10px;
   margin-bottom: 2rem;
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 .movie-info-box__header {
