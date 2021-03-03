@@ -7,7 +7,7 @@ const movieList = [
         "Genre": ["Drama", "Western"],
         "Director": "Quentin Tarantino",
         "Writer": "Quentin Tarantino",
-        "Actors": ["Jamie Foxx", " Christoph Waltz", " Leonardo DiCaprio", " Kerry Washington"]
+        "Actors": ["Jamie Foxx", "Christoph Waltz", "Leonardo DiCaprio", "Kerry Washington"]
     },
     {
         "Title": "Brazil",
@@ -16,7 +16,7 @@ const movieList = [
         "Genre": ["Drama", "Sci-Fi"],
         "Director": "Terry Gilliam",
         "Writer": "Terry Gilliam",
-        "Actors": ["Jonathan Pryce", " Robert De Niro", " Katherine Helmond", " Ian Holm"]
+        "Actors": ["Jonathan Pryce", "Robert De Niro", "Katherine Helmond", "Ian Holm"]
     },
     {
         "Title": "American History X",
@@ -25,7 +25,7 @@ const movieList = [
         "Genre": ["Drama"],
         "Director": "Tony Kaye",
         "Writer": "David McKenna",
-        "Actors": ["Edward Norton", " Edward Furlong", " Beverly D'Angelo", " Jennifer Lien"]
+        "Actors": ["Edward Norton", "Edward Furlong", "Beverly D'Angelo", "Jennifer Lien"]
     },
     {
         "Title": "Fight Club",
@@ -34,7 +34,7 @@ const movieList = [
         "Genre": ["Drama"],
         "Director": "David Fincher",
         "Writer": "Chuck Palahniuk",
-        "Actors": ["Edward Norton", " Brad Pitt", " Meat Loaf", " Zach Grenier"]
+        "Actors": ["Edward Norton", "Brad Pitt", "Meat Loaf", "Zach Grenier"]
     },
     {
         "Title": "Inglourious Basterds",
@@ -43,7 +43,7 @@ const movieList = [
         "Genre": ["Adventure", "Drama", "War"],
         "Director": "Quentin Tarantino",
         "Writer": "Quentin Tarantino",
-        "Actors": ["Brad Pitt", " Mélanie Laurent", " Christoph Waltz", " Eli Roth"]
+        "Actors": ["Brad Pitt", "Mélanie Laurent", "Christoph Waltz", "Eli Roth"]
     }
 ]
 
@@ -62,10 +62,15 @@ function addDataToHTML() {
 
         for (let i = 1; i < movieArray.length; i++) {
 
-            const [property, value] = movieArray[i];
+            let [property, value] = movieArray[i];
             const pTag = document.createElement('p');
-            pTag.classList.add('movie-info-box__info');
 
+            // checks if value is an array object.
+            if (Array.isArray(value)){
+                value = value.join(', ');
+            }
+
+            pTag.classList.add('movie-info-box__info');
             pTag.innerHTML = `<span>${property}</span>: ${value}`; 
             section.appendChild(pTag);
         }
